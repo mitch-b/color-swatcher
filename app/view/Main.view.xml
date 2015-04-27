@@ -1,0 +1,22 @@
+<core:View
+        controllerName="colorswatcher.view.Main"
+        xmlns="sap.m"
+        xmlns:core="sap.ui.core"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns:custom="colorswatcher.controls"
+        xmlns:html="http://www.w3.org/1999/xhtml">
+    <Page title="Color Swatcher">
+        <content>
+            <custom:ColorSwatchLibrary title="{colors>/swatches/0/category}" id="colorSwatchLibrary" colors="{colors>/swatches/0/colors}">
+                <custom:colors>
+                    <custom:ColorSwatch color="{colors>data/hex}" name="{colors>name}" />
+                </custom:colors>
+            </custom:ColorSwatchLibrary>
+            <custom:ColorSwatchLibrary title="{colors>/swatches/1/category}" id="colorSwatchLibrary2" colors="{colors>/swatches/1/colors}">
+                <custom:colors>
+                    <custom:ColorSwatch color="{colors>data/hex}" name="{colors>name}" />
+                </custom:colors>
+            </custom:ColorSwatchLibrary>
+        </content>
+    </Page>
+</core:View>
