@@ -4,20 +4,17 @@ sap.ui.core.Control.extend("colorswatcher.controls.ColorSwatchLibrary", {
             title: "string"
         },
         aggregations: {
-            //"layout": { type: "sap.ui.layout.ResponsiveFlowLayout", multiple: false, visibility: "hidden" },
             "colors": { type: "colorswatcher.controls.ColorSwatch", multiple: true }
         }
     },
     renderer: function(oRm, oControl) {
-        //var layout = oControl.getAggregation("layout");
-        //layout.getContent()[0].setModel(oControl.getModel());
         oRm.write("<div");
         oRm.writeControlData(oControl);
         oRm.writeStyles();
         oRm.addClass("colorswatcher-library");
         oRm.write(">");
         oRm.write("<p class='colorswatcher-library-title'>");
-        oRm.write(oControl.getTitle());
+        oRm.writeEscaped(oControl.getTitle());
         oRm.write("</p>");
 
         var colors = oControl.getColors();

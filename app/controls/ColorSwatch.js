@@ -38,7 +38,9 @@ sap.ui.core.Control.extend("colorswatcher.controls.ColorSwatch", {
         oRm.writeControlData(oControl);
         oRm.addClass("colorswatch");
         oRm.write(">");
-        oRm.write("<span class='colorswatch-name'>" + oControl.getName() + "</span>");
+        oRm.write("<span class='colorswatch-name'>");
+        oRm.writeEscaped(oControl.getName());
+        oRm.write("</span>");
 
         // colorblock
         oRm.write("<div ");
@@ -52,7 +54,9 @@ sap.ui.core.Control.extend("colorswatcher.controls.ColorSwatch", {
         // loop through color codes here
         // for now, show one value
         oRm.write("<span class='colorswatch-code-key'>HEX</span>");
-        oRm.write("<span class='colorswatch-code-value'>" + oControl.getColor() + "</span>");
+        oRm.write("<span class='colorswatch-code-value'>");
+        oRm.writeEscaped(oControl.getColor());
+        oRm.write("</span>");
 
         oRm.write("</div>");
         oRm.write("</div>");
