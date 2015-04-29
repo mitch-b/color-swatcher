@@ -7,6 +7,7 @@
         xmlns:html="http://www.w3.org/1999/xhtml">
     <Page title="Color Swatcher">
         <content>
+            <html:p>Click on a color to copy the Hex code to your clipboard. Must use a modern browser for this functionality.</html:p>
             <custom:ColorSwatchLibrary title="{colors>/swatches/0/category}" id="colorSwatchLibrary" colors="{colors>/swatches/0/colors}">
                 <custom:colors>
                     <custom:ColorSwatch color="{colors>data/hex}" name="{colors>name}" />
@@ -17,6 +18,14 @@
                     <custom:ColorSwatch color="{colors>data/hex}" name="{colors>name}" />
                 </custom:colors>
             </custom:ColorSwatchLibrary>
+
         </content>
+        <footer>
+            <Bar>
+                <contentMiddle>
+                    <html:a class="white-text" href="https://github.com/mitch-b/color-swatcher">GitHub Source</html:a>
+                </contentMiddle>
+            </Bar>
+        </footer>
     </Page>
 </core:View>

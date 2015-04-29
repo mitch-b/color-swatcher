@@ -1,16 +1,13 @@
-.colorswatcher-library {
-
-}
 .colorswatcher-library-title {
     font-size: 30px;
-}
-.colorswatch {
 }
 .colorswatch-name {
     font-size: 1.4em;
 }
-.colorswatch-code-key {
-}
 .colorswatch-code-value {
     font-family: monospace;
+}
+.white-text {
+    color:#FFFFFF;
+    text-decoration: none;
 }

@@ -1,7 +1,7 @@
 OpenUI5 Color Swatcher Sample Application
 =========================================
 
-Sample OpenUI5 application using/creating custom components
+Sample OpenUI5 application using/creating custom components. Clicking on a color swatch will copy the HEX value to your clipboard.
 
 ![Color Swatcher Sample](readme-screenshot.png)
 
